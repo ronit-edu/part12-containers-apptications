@@ -1,0 +1,88 @@
+Script started on 2024-05-04 17:20:49+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="92" LINES="22"]
+                                                                                            ]0;ronit@ASUS-A15: ~/codes/open_university/full_stack_open/part12/part12-containers-applications/todo-app/todo-backend[0m[27m[24m[J[32m┌──([1m[32m[34mronit㉿ASUS-A15[0m[34m[32m)-[[1m[32m[39m~/…/part12/part12-containers-applications/todo-app/todo-backend[0m[32m][1m[32m[33m[38;5;105m (master)[0m[38;5;105m[32m
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mexit[39m[36md[36mo[36mc[36mk[36mer[39m exec [32m-it[39m c63c48fdc82c bash[26Dconta[39mi[39mn[39mer ls              [14D[12Dexec [32m-[32mi[32mt[39m c63c48fdc82c bash[26Dconta[39mi[39mn[39mer ls              [14D[10Dmpose [32m-[32mf[39m [1md[1mocker-compose.dev.yml[0m up [32m-d[39m[?1l>[?2004l
+[33mWARN[0m[0000] /home/ronit/codes/open_university/full_stack_open/part12/part12-containers-applications/todo-app/todo-backend/docker-compose.dev.yml: `version` is obsolete 
+[33mWARN[0m[0000] Found orphan containers ([todo-backend-app-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 1/0
+ [32m✔[0m Container todo-backend-mongo-1  [32mRunning[0m                                             [34m0.0s [0m
+[?25h                                                                                            ]0;ronit@ASUS-A15: ~/codes/open_university/full_stack_open/part12/part12-containers-applications/todo-app/todo-backend
+[0m[27m[24m[J[32m┌──([1m[32m[34mronit㉿ASUS-A15[0m[34m[32m)-[[1m[32m[39m~/…/part12/part12-containers-applications/todo-app/todo-backend[0m[32m][1m[32m[33m[38;5;105m (master)[0m[38;5;105m[32m
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mdocker[39m compose [32m-f[39m [1mdocker-compose.dev.yml[0m up [32m-d[39m[46D[36me[36mx[36mi[36mt[39m[39m [39m          [39m [39m  [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m     [39m [39m [42D[36md[36mo[36mc[36mk[36mer[39m exec [32m-it[39m c63c48fdc82c bash[26Dconta[39mi[39mn[39mer ls              [14D[?1l>[?2004l
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS         PORTS                     NAMES
+c63c48fdc82c   mongo     "docker-entrypoint.s…"   43 minutes ago   Up 7 minutes   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+                                                                                            ]0;ronit@ASUS-A15: ~/codes/open_university/full_stack_open/part12/part12-containers-applications/todo-app/todo-backend
+[0m[27m[24m[J[32m┌──([1m[32m[34mronit㉿ASUS-A15[0m[34m[32m)-[[1m[32m[39m~/…/part12/part12-containers-applications/todo-app/todo-backend[0m[32m][1m[32m[33m[38;5;105m (master)[0m[38;5;105m[32m
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mdocker[39m container ls[10Dmpose [32m-[32mf[39m [1md[1mocker-compose.dev.yml[0m up [32m-d[39m[46D[36me[36mx[36mi[36mt[39m[39m [39m          [39m [39m  [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m     [39m [39m [42D[36md[36mo[36mc[36mk[36mer[39m exec [32m-it[39m c63c48fdc82c bash[?1l>[?2004l
+[?2004hroot@c63c48fdc82c:/# exitmongosh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6636445855d463ded42202d7
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.5[0m
+Using MongoDB:		7.0.9
+[1m[33mUsing Mongosh[0m:		2.2.5
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-05-04T14:13:29.679+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never' in this binary version
+   2024-05-04T14:13:29.679+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Gs[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'663639b938fad465442202d9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66363fdcb5ae1e5edd7428df'[39m),
+    text: [32m'Do hello'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> show collections[31G[1G[0Jthe_database> use the_database[31G[1G[0Jthe_database> show dbs[23G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> db.todos.findOneAndDelete({[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m})[3G[1A[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m})[88G[1D[1G[0Jthe_database> db.todos.insertOne[44m([49m{[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m})[87G[1D[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m})[86G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m,})[87G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, })[88G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, d})[89G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [36mdo[39m})[90G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, doe}) [91G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [36mdo[39m})[90G[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, don}) [91G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, done})[92G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:})[1G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, done})[92G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:})[1G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: })[2G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: f})[3G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: fa})[4G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: fal})[5G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: fals})[6G[1A[1G[0Jthe_database> db.todos.insertOne([44m{[49m[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: [33mfalse[39m})[7G[2C[1A[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: [33mfalse[39m})[9G
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'663644ab55d463ded42202d8'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: [33mfalse[39m})[9G[1A[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'663639b938fad465442202d9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66363fdcb5ae1e5edd7428df'[39m),
+    text: [32m'Do hello'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId([32m'663644ab55d463ded42202d8'[39m),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004hroot@c63c48fdc82c:/# exit
+[?2004lexit
+[1m
+What's next?
+[0m  Try Docker Debug for seamless, persistent debugging tools in any container or image → [36mdocker debug c63c48fdc82c[0m
+  Learn more at https://docs.docker.com/go/debug-cli/
+                                                                                            ]0;ronit@ASUS-A15: ~/codes/open_university/full_stack_open/part12/part12-containers-applications/todo-app/todo-backend
+[0m[27m[24m[J[32m┌──([1m[32m[34mronit㉿ASUS-A15[0m[34m[32m)-[[1m[32m[39m~/…/part12/part12-containers-applications/todo-app/todo-backend[0m[32m][1m[32m[33m[38;5;105m (master)[0m[38;5;105m[32m
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1me[0m[1me[0m[38;2;153;153;153mxit[39m[0m[36me[36mx[39m[4m[37me[4m[37mx[4m[37mi[24m[39m[24m[36me[24m[36mx[24m[36mi[36mt[39m[?1l>[?2004l
+
+Script done on 2024-05-04 17:23:14+03:00 [COMMAND_EXIT_CODE="0"]
